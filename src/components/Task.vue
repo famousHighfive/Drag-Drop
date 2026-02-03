@@ -4,7 +4,7 @@ const props = defineProps({
         type: Object,
         required: true
     },
-    // index: Number
+    index: Number
 })
 
 const emit = defineEmits(['delete-task'])
@@ -18,7 +18,7 @@ function deleteTask(){
 <template>
 
     <li class="item">
-        <span>{{ task.id }}. {{ task.title }}</span>
+        <span>{{ index }}. {{ task.title }}</span>
         <button @click="deleteTask">❌</button>
     </li>
 
